@@ -1,5 +1,4 @@
 PODS:
-  - AppBoxoSDK (1.3.30)
   - boost-for-react-native (1.63.0)
   - CocoaAsyncSocket (7.6.4)
   - CocoaLibEvent (1.0.0)
@@ -237,9 +236,6 @@ PODS:
     - React-cxxreact (= 0.63.2)
     - React-jsi (= 0.63.2)
   - React-jsinspector (0.63.2)
-  - react-native-appboxosdk (1.0.15):
-    - AppBoxoSDK (= 1.3.30)
-    - React
   - react-native-safe-area-context (3.1.7):
     - React
   - React-RCTActionSheet (0.63.2):
@@ -351,7 +347,6 @@ DEPENDENCIES:
   - React-jsi (from `../node_modules/react-native/ReactCommon/jsi`)
   - React-jsiexecutor (from `../node_modules/react-native/ReactCommon/jsiexecutor`)
   - React-jsinspector (from `../node_modules/react-native/ReactCommon/jsinspector`)
-  - "react-native-appboxosdk (from `../node_modules/@appboxo/react-native-sdk`)"
   - react-native-safe-area-context (from `../node_modules/react-native-safe-area-context`)
   - React-RCTActionSheet (from `../node_modules/react-native/Libraries/ActionSheetIOS`)
   - React-RCTAnimation (from `../node_modules/react-native/Libraries/NativeAnimation`)
@@ -371,7 +366,6 @@ DEPENDENCIES:
 
 SPEC REPOS:
   trunk:
-    - AppBoxoSDK
     - boost-for-react-native
     - CocoaAsyncSocket
     - CocoaLibEvent
@@ -416,8 +410,6 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native/ReactCommon/jsiexecutor"
   React-jsinspector:
     :path: "../node_modules/react-native/ReactCommon/jsinspector"
-  react-native-appboxosdk:
-    :path: "../node_modules/@appboxo/react-native-sdk"
   react-native-safe-area-context:
     :path: "../node_modules/react-native-safe-area-context"
   React-RCTActionSheet:
@@ -452,7 +444,6 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native/ReactCommon/yoga"
 
 SPEC CHECKSUMS:
-  AppBoxoSDK: eb664db29179f97f37075ed1a2674de0b4dd3858
   boost-for-react-native: 39c7adb57c4e60d6c5479dd8623128eb5b3f0f2c
   CocoaAsyncSocket: 694058e7c0ed05a9e217d1b3c7ded962f4180845
   CocoaLibEvent: 2fab71b8bd46dd33ddb959f7928ec5909f838e3f
@@ -479,7 +470,6 @@ SPEC CHECKSUMS:
   React-jsi: 54245e1d5f4b690dec614a73a3795964eeef13a8
   React-jsiexecutor: 8ca588cc921e70590820ce72b8789b02c67cce38
   React-jsinspector: b14e62ebe7a66e9231e9581279909f2fc3db6606
-  react-native-appboxosdk: fb0f87ab3b72171a0246ab65373736e48b3085ef
   react-native-safe-area-context: 955ecfce672683b495d9294d2f154a9ad1d9796b
   React-RCTActionSheet: 910163b6b09685a35c4ebbc52b66d1bfbbe39fc5
   React-RCTAnimation: 9a883bbe1e9d2e158d4fb53765ed64c8dc2200c6
@@ -500,4 +490,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: 46bf5dda8ef542ef81d2297403b2f50cb521a32b
 
-COCOAPODS: 1.9.3
+COCOAPODS: 1.9.1

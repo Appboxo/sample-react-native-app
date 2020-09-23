@@ -2,29 +2,29 @@
 import React from 'react';
 import {Button, StyleSheet, View, Text} from 'react-native';
 /*LIBS*/
-import appboxosdk from '@appboxo/react-native-sdk';
+// import appboxosdk from '@appboxo/react-native-sdk';
 
 export default function FirstScreen() {
-  React.useEffect(() => {
-    const customEventsSubscription = appboxosdk.customEvents.subscribe(
-      (event) => {
-        const newEvent = {
-          app_id: 'app36902',
-          custom_event: {
-            payload: {payment: 'received'},
-            request_id: event.custom_event.request_id,
-            type: 'event',
-          },
-        };
-        appboxosdk.customEvents.send(newEvent);
-      },
-      () => {},
-    );
-    return () => {
-      console.log('destroy first');
-      customEventsSubscription();
-    };
-  }, []);
+  // React.useEffect(() => {
+  //   const customEventsSubscription = appboxosdk.customEvents.subscribe(
+  //     (event) => {
+  //       const newEvent = {
+  //         app_id: 'app36902',
+  //         custom_event: {
+  //           payload: {payment: 'received'},
+  //           request_id: event.custom_event.request_id,
+  //           type: 'event',
+  //         },
+  //       };
+  //       appboxosdk.customEvents.send(newEvent);
+  //     },
+  //     () => {},
+  //   );
+  //   return () => {
+  //     console.log('destroy first');
+  //     customEventsSubscription();
+  //   };
+  // }, []);
 
   const handleOpenMiniapp = () => {
     appboxosdk.openMiniapp('app36902', ''); //launch miniapp by id with auth payload
