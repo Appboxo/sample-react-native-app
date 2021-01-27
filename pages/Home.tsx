@@ -1,20 +1,37 @@
 /*CORE*/
 import React from 'react';
-import {Button, StyleSheet, View} from 'react-native';
+import {Button, StyleSheet, View, Text} from 'react-native';
 /*LIBS*/
-import appboxosdk from '@appboxo/react-native-sdk';
+import appboxo from '@appboxo/react-native-sdk-test';
 
 interface Props {
   navigation: any;
 }
 
 export default function Home({navigation}: Props) {
+  const [styling, setStyling] = React.useState({});
+
   React.useEffect(() => {
-    appboxosdk.setConfig('[client_id]', false); //set your Appboxo client id
+    appboxo.setConfig('237183', true, 'light'); //set your Appboxo client id
   }, []);
+
+  console.log(styling, 'styling');
 
   return (
     <View style={styles.container}>
+      <Text style={styling}>
+        Click `Hit Me!!` button to make it crash when applying borderColor to
+        Text :D
+      </Text>
+      <Button
+        title="Set styling"
+        onPress={() =>
+          setStyling({
+            borderWidth: 2,
+            borderColor: 'red',
+          })
+        }
+      />
       <Button
         title="Go to first screen"
         onPress={() => navigation.navigate('FirstScreen')}
@@ -33,6 +50,11 @@ const styles = StyleSheet.create({
     flexDirection: 'column',
     alignItems: 'center',
     backgroundColor: '#fff',
+    borderWidth: 2,
     justifyContent: 'space-around',
+  },
+  text: {
+    borderWidth: 2,
+    borderColor: 'red',
   },
 });

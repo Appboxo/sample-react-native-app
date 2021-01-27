@@ -2,21 +2,23 @@
 import React from 'react';
 import {Button, StyleSheet, View, Text} from 'react-native';
 /*LIBS*/
-import appboxosdk from '@appboxo/react-native-sdk';
+import appboxo from '@appboxo/react-native-sdk-test';
 
 export default function FirstScreen() {
+  const [theme, setTheme] = React.useState<'light' | 'dark'>('light');
+
   React.useEffect(() => {
-    const customEventsSubscription = appboxosdk.customEvents.subscribe(
+    const customEventsSubscription = appboxo.customEvents.subscribe(
       (event) => {
         const newEvent = {
-          app_id: 'app36902',
+          app_id: 'app43196',
           custom_event: {
             payload: {payment: 'received'},
             request_id: event.custom_event.request_id,
             type: 'event',
           },
         };
-        appboxosdk.customEvents.send(newEvent);
+        appboxo.customEvents.send(newEvent);
       },
       () => {},
     );
@@ -27,7 +29,13 @@ export default function FirstScreen() {
   }, []);
 
   const handleOpenMiniapp = () => {
-    appboxosdk.openMiniapp('app36902', ''); //launch miniapp by id with auth payload
+    appboxo.openMiniapp('app41013', '', {
+      extraUrlParams: {test: 'test'},
+    }); //launch miniapp by id with auth payload
+  };
+
+  const changeTheme = () => {
+    setTheme(theme === 'light' ? 'dark' : 'light');
   };
 
   return (
@@ -40,6 +48,7 @@ export default function FirstScreen() {
         onPress={handleOpenMiniapp}
         accessibilityLabel="Launch miniapp"
       />
+      <Button title={'Theme: ' + theme} onPress={changeTheme} />
     </View>
   );
 }

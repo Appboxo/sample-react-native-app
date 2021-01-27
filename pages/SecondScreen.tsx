@@ -2,11 +2,11 @@
 import React from 'react';
 import {StyleSheet, View, Button, Text} from 'react-native';
 /*LIBS*/
-import appboxosdk from '@appboxo/react-native-sdk';
+import appboxo from '@appboxo/react-native-sdk-test';
 
 export default function SecondScreen() {
   React.useEffect(() => {
-    const customEventsSubscription = appboxosdk.customEvents.subscribe(
+    const customEventsSubscription = appboxo.customEvents.subscribe(
       (event) => {
         const newEvent = {
           app_id: 'app36902',
@@ -17,12 +17,12 @@ export default function SecondScreen() {
             type: 'event',
           },
         };
-        appboxosdk.customEvents.send(newEvent);
+        appboxo.customEvents.send(newEvent);
       },
       () => {},
     );
 
-    const lifecycleHooksSubscription = appboxosdk.lifecycleHooksListener({
+    const lifecycleHooksSubscription = appboxo.lifecycleHooksListener({
       onLaunch: (appId: string) => console.log(appId, 'onLaunch'),
       onResume: (appId: string) => console.log(appId, 'onResume'),
       onClose: (appId: string) => console.log(appId, 'onClose'),
@@ -39,7 +39,7 @@ export default function SecondScreen() {
   }, []);
 
   const handleOpenMiniapp = () => {
-    appboxosdk.openMiniapp('app36902', ''); //launch miniapp by id with auth payload
+    appboxo.openMiniapp('app36902', ''); //launch miniapp by id with auth payload
   };
 
   return (
