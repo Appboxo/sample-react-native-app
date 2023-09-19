@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		00E356F31AD99517003FC87E /* AppboxoTestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* AppboxoTestTests.m */; };
+		03CB0FF62AB46ED30079F5B7 /* main.jsbundle in Resources */ = {isa = PBXBuildFile; fileRef = 03CB0FF52AB46ED30079F5B7 /* main.jsbundle */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
@@ -15,9 +16,9 @@
 		2D02E4BD1E0B4A84006451C7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		2DCD954D1E0B4F2C00145EB5 /* AppboxoTestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* AppboxoTestTests.m */; };
-		6DE1035BF7DE317FE9E328C2 /* libPods-AppboxoTest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B32E30124374EF66F22F144 /* libPods-AppboxoTest.a */; };
+		6F05E6D10681E014BE276275 /* libPods-AppboxoTest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D084AD3CBAD41D073C168797 /* libPods-AppboxoTest.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
-		C5A2E9E15985BB9A5A338FCD /* libPods-AppboxoTest-AppboxoTestTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F36FD6641BD6D81442298FE /* libPods-AppboxoTest-AppboxoTestTests.a */; };
+		FF9347532903496C549FCCE4 /* libPods-AppboxoTest-AppboxoTestTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E6B9A6C4B0E5BE8355CF89A2 /* libPods-AppboxoTest-AppboxoTestTests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,12 +39,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		008F07F21AC5B25A0029DE68 /* main.jsbundle */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = main.jsbundle; sourceTree = "<group>"; };
 		00E356EE1AD99517003FC87E /* AppboxoTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AppboxoTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* AppboxoTestTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppboxoTestTests.m; sourceTree = "<group>"; };
-		0B32E30124374EF66F22F144 /* libPods-AppboxoTest.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AppboxoTest.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		0F36FD6641BD6D81442298FE /* libPods-AppboxoTest-AppboxoTestTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AppboxoTest-AppboxoTestTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		017C9BB165A2942E227C050D /* Pods-AppboxoTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppboxoTest.debug.xcconfig"; path = "Target Support Files/Pods-AppboxoTest/Pods-AppboxoTest.debug.xcconfig"; sourceTree = "<group>"; };
+		03CB0FF52AB46ED30079F5B7 /* main.jsbundle */ = {isa = PBXFileReference; lastKnownFileType = text; path = main.jsbundle; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* AppboxoTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppboxoTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = AppboxoTest/AppDelegate.h; sourceTree = "<group>"; };
 		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = AppboxoTest/AppDelegate.m; sourceTree = "<group>"; };
@@ -52,13 +52,14 @@
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = AppboxoTest/main.m; sourceTree = "<group>"; };
 		2D02E47B1E0B4A5D006451C7 /* AppboxoTest-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AppboxoTest-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D02E4901E0B4A5D006451C7 /* AppboxoTest-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "AppboxoTest-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		52F78077DC0C334A966C7EB6 /* Pods-AppboxoTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppboxoTest.release.xcconfig"; path = "Target Support Files/Pods-AppboxoTest/Pods-AppboxoTest.release.xcconfig"; sourceTree = "<group>"; };
+		73DFA737F7806BB6140FEB06 /* Pods-AppboxoTest-AppboxoTestTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppboxoTest-AppboxoTestTests.debug.xcconfig"; path = "Target Support Files/Pods-AppboxoTest-AppboxoTestTests/Pods-AppboxoTest-AppboxoTestTests.debug.xcconfig"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = AppboxoTest/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		920AE01196CF291853BA329C /* Pods-AppboxoTest-AppboxoTestTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppboxoTest-AppboxoTestTests.release.xcconfig"; path = "Target Support Files/Pods-AppboxoTest-AppboxoTestTests/Pods-AppboxoTest-AppboxoTestTests.release.xcconfig"; sourceTree = "<group>"; };
-		A73D6623F5213E78782B8867 /* Pods-AppboxoTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppboxoTest.release.xcconfig"; path = "Target Support Files/Pods-AppboxoTest/Pods-AppboxoTest.release.xcconfig"; sourceTree = "<group>"; };
-		D5B2C53165757B8DB1E88994 /* Pods-AppboxoTest-AppboxoTestTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppboxoTest-AppboxoTestTests.debug.xcconfig"; path = "Target Support Files/Pods-AppboxoTest-AppboxoTestTests/Pods-AppboxoTest-AppboxoTestTests.debug.xcconfig"; sourceTree = "<group>"; };
+		C55187C891808DAA549D3556 /* Pods-AppboxoTest-AppboxoTestTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppboxoTest-AppboxoTestTests.release.xcconfig"; path = "Target Support Files/Pods-AppboxoTest-AppboxoTestTests/Pods-AppboxoTest-AppboxoTestTests.release.xcconfig"; sourceTree = "<group>"; };
+		D084AD3CBAD41D073C168797 /* libPods-AppboxoTest.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AppboxoTest.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E6B9A6C4B0E5BE8355CF89A2 /* libPods-AppboxoTest-AppboxoTestTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AppboxoTest-AppboxoTestTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
-		F3E913972B31574447799D3B /* Pods-AppboxoTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppboxoTest.debug.xcconfig"; path = "Target Support Files/Pods-AppboxoTest/Pods-AppboxoTest.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,7 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C5A2E9E15985BB9A5A338FCD /* libPods-AppboxoTest-AppboxoTestTests.a in Frameworks */,
+				FF9347532903496C549FCCE4 /* libPods-AppboxoTest-AppboxoTestTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,7 +75,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6DE1035BF7DE317FE9E328C2 /* libPods-AppboxoTest.a in Frameworks */,
+				6F05E6D10681E014BE276275 /* libPods-AppboxoTest.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -115,7 +116,7 @@
 		13B07FAE1A68108700A75B9A /* AppboxoTest */ = {
 			isa = PBXGroup;
 			children = (
-				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
+				03CB0FF52AB46ED30079F5B7 /* main.jsbundle */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
@@ -131,8 +132,8 @@
 			children = (
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
 				ED2971642150620600B7C4FE /* JavaScriptCore.framework */,
-				0B32E30124374EF66F22F144 /* libPods-AppboxoTest.a */,
-				0F36FD6641BD6D81442298FE /* libPods-AppboxoTest-AppboxoTestTests.a */,
+				D084AD3CBAD41D073C168797 /* libPods-AppboxoTest.a */,
+				E6B9A6C4B0E5BE8355CF89A2 /* libPods-AppboxoTest-AppboxoTestTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -173,10 +174,10 @@
 		896751923113820FB4EA36BE /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				F3E913972B31574447799D3B /* Pods-AppboxoTest.debug.xcconfig */,
-				A73D6623F5213E78782B8867 /* Pods-AppboxoTest.release.xcconfig */,
-				D5B2C53165757B8DB1E88994 /* Pods-AppboxoTest-AppboxoTestTests.debug.xcconfig */,
-				920AE01196CF291853BA329C /* Pods-AppboxoTest-AppboxoTestTests.release.xcconfig */,
+				017C9BB165A2942E227C050D /* Pods-AppboxoTest.debug.xcconfig */,
+				52F78077DC0C334A966C7EB6 /* Pods-AppboxoTest.release.xcconfig */,
+				73DFA737F7806BB6140FEB06 /* Pods-AppboxoTest-AppboxoTestTests.debug.xcconfig */,
+				C55187C891808DAA549D3556 /* Pods-AppboxoTest-AppboxoTestTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -188,13 +189,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "AppboxoTestTests" */;
 			buildPhases = (
-				99B57772D4E3BBB71ECEB08D /* [CP] Check Pods Manifest.lock */,
-				DF20B3158040140DE7F85573 /* [CP] Prepare Artifacts */,
+				76ED03FFCC270FDBEE53E743 /* [CP] Check Pods Manifest.lock */,
 				00E356EA1AD99517003FC87E /* Sources */,
 				00E356EB1AD99517003FC87E /* Frameworks */,
 				00E356EC1AD99517003FC87E /* Resources */,
-				4DF74E02309D0674CD39F2F6 /* [CP] Copy Pods Resources */,
-				1477FE1E28EEF162D85A9CA7 /* [CP] Embed Pods Frameworks */,
+				C2E56A078536677D998489DF /* [CP] Copy Pods Resources */,
+				A251B6AAB9B74B11B098E193 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -210,15 +210,14 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "AppboxoTest" */;
 			buildPhases = (
-				0420A8CB575674623975BAD1 /* [CP] Check Pods Manifest.lock */,
+				CE6902E14BCBBA380D79B342 /* [CP] Check Pods Manifest.lock */,
 				FD10A7F022414F080027D42C /* Start Packager */,
-				587C6587437900D1A82A2FFD /* [CP] Prepare Artifacts */,
 				13B07F871A680F5B00A75B9A /* Sources */,
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
-				7673B7292A47C1F4F6B8C9E4 /* [CP] Copy Pods Resources */,
-				C0ABD6DB4D602593198ECE46 /* [CP] Embed Pods Frameworks */,
+				421ECC63848FCCA7DDCE14F3 /* [CP] Copy Pods Resources */,
+				63A556746CF8C0F010071839 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -284,10 +283,12 @@
 					};
 					2D02E47A1E0B4A5D006451C7 = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = G49R8L8WJD;
 						ProvisioningStyle = Automatic;
 					};
 					2D02E48F1E0B4A5D006451C7 = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = G49R8L8WJD;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 2D02E47A1E0B4A5D006451C7;
 					};
@@ -326,6 +327,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03CB0FF62AB46ED30079F5B7 /* main.jsbundle in Resources */,
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 			);
@@ -363,45 +365,6 @@
 			shellPath = /bin/sh;
 			shellScript = "export NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh";
 		};
-		0420A8CB575674623975BAD1 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-AppboxoTest-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		1477FE1E28EEF162D85A9CA7 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-AppboxoTest-AppboxoTestTests/Pods-AppboxoTest-AppboxoTestTests-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/cocoapods-artifacts-${CONFIGURATION}.txt",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AppboxoTest-AppboxoTestTests/Pods-AppboxoTest-AppboxoTestTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		2D02E4CB1E0B4B27006451C7 /* Bundle React Native Code And Images */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -416,43 +379,7 @@
 			shellPath = /bin/sh;
 			shellScript = "export NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh";
 		};
-		4DF74E02309D0674CD39F2F6 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-AppboxoTest-AppboxoTestTests/Pods-AppboxoTest-AppboxoTestTests-resources.sh",
-				"${PODS_CONFIGURATION_BUILD_DIR}/React-Core/AccessibilityResources.bundle",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/AccessibilityResources.bundle",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AppboxoTest-AppboxoTestTests/Pods-AppboxoTest-AppboxoTestTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		587C6587437900D1A82A2FFD /* [CP] Prepare Artifacts */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-AppboxoTest/Pods-AppboxoTest-artifacts.sh",
-				"${PODS_ROOT}/AppBoxoSDK/AppBoxoSDK.xcframework",
-			);
-			name = "[CP] Prepare Artifacts";
-			outputPaths = (
-				"${BUILT_PRODUCTS_DIR}/cocoapods-artifacts-${CONFIGURATION}.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AppboxoTest/Pods-AppboxoTest-artifacts.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		7673B7292A47C1F4F6B8C9E4 /* [CP] Copy Pods Resources */ = {
+		421ECC63848FCCA7DDCE14F3 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -470,7 +397,25 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AppboxoTest/Pods-AppboxoTest-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		99B57772D4E3BBB71ECEB08D /* [CP] Check Pods Manifest.lock */ = {
+		63A556746CF8C0F010071839 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AppboxoTest/Pods-AppboxoTest-frameworks.sh",
+				"${PODS_XCFRAMEWORKS_BUILD_DIR}/AppBoxoSDK/AppBoxoSDK.framework/AppBoxoSDK",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AppBoxoSDK.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AppboxoTest/Pods-AppboxoTest-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		76ED03FFCC270FDBEE53E743 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -492,39 +437,62 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		C0ABD6DB4D602593198ECE46 /* [CP] Embed Pods Frameworks */ = {
+		A251B6AAB9B74B11B098E193 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-AppboxoTest/Pods-AppboxoTest-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/cocoapods-artifacts-${CONFIGURATION}.txt",
+				"${PODS_ROOT}/Target Support Files/Pods-AppboxoTest-AppboxoTestTests/Pods-AppboxoTest-AppboxoTestTests-frameworks.sh",
+				"${PODS_XCFRAMEWORKS_BUILD_DIR}/AppBoxoSDK/AppBoxoSDK.framework/AppBoxoSDK",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AppBoxoSDK.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AppboxoTest/Pods-AppboxoTest-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AppboxoTest-AppboxoTestTests/Pods-AppboxoTest-AppboxoTestTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		DF20B3158040140DE7F85573 /* [CP] Prepare Artifacts */ = {
+		C2E56A078536677D998489DF /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-AppboxoTest-AppboxoTestTests/Pods-AppboxoTest-AppboxoTestTests-artifacts.sh",
-				"${PODS_ROOT}/AppBoxoSDK/AppBoxoSDK.xcframework",
+				"${PODS_ROOT}/Target Support Files/Pods-AppboxoTest-AppboxoTestTests/Pods-AppboxoTest-AppboxoTestTests-resources.sh",
+				"${PODS_CONFIGURATION_BUILD_DIR}/React-Core/AccessibilityResources.bundle",
 			);
-			name = "[CP] Prepare Artifacts";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
-				"${BUILT_PRODUCTS_DIR}/cocoapods-artifacts-${CONFIGURATION}.txt",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/AccessibilityResources.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AppboxoTest-AppboxoTestTests/Pods-AppboxoTest-AppboxoTestTests-artifacts.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AppboxoTest-AppboxoTestTests/Pods-AppboxoTest-AppboxoTestTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CE6902E14BCBBA380D79B342 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AppboxoTest-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		FD10A7F022414F080027D42C /* Start Packager */ = {
@@ -620,7 +588,7 @@
 /* Begin XCBuildConfiguration section */
 		00E356F61AD99517003FC87E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D5B2C53165757B8DB1E88994 /* Pods-AppboxoTest-AppboxoTestTests.debug.xcconfig */;
+			baseConfigurationReference = 73DFA737F7806BB6140FEB06 /* Pods-AppboxoTest-AppboxoTestTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -643,7 +611,7 @@
 		};
 		00E356F71AD99517003FC87E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 920AE01196CF291853BA329C /* Pods-AppboxoTest-AppboxoTestTests.release.xcconfig */;
+			baseConfigurationReference = C55187C891808DAA549D3556 /* Pods-AppboxoTest-AppboxoTestTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
@@ -663,7 +631,7 @@
 		};
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F3E913972B31574447799D3B /* Pods-AppboxoTest.debug.xcconfig */;
+			baseConfigurationReference = 017C9BB165A2942E227C050D /* Pods-AppboxoTest.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -687,7 +655,7 @@
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A73D6623F5213E78782B8867 /* Pods-AppboxoTest.release.xcconfig */;
+			baseConfigurationReference = 52F78077DC0C334A966C7EB6 /* Pods-AppboxoTest.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -717,6 +685,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = G49R8L8WJD;
 				ENABLE_TESTABILITY = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = "AppboxoTest-tvOS/Info.plist";
@@ -745,6 +714,7 @@
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = G49R8L8WJD;
 				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = "AppboxoTest-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -770,6 +740,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = G49R8L8WJD;
 				ENABLE_TESTABILITY = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = "AppboxoTest-tvOSTests/Info.plist";
@@ -797,6 +768,7 @@
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = G49R8L8WJD;
 				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = "AppboxoTest-tvOSTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";

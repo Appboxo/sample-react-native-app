@@ -9,7 +9,7 @@ export default function SecondScreen() {
     const customEventsSubscription = appboxosdk.customEvents.subscribe(
       (event) => {
         const newEvent = {
-          app_id: 'app36902',
+          app_id: 'app16973',
           custom_event: {
             error_type: 'canceled',
             payload: {},
@@ -27,6 +27,7 @@ export default function SecondScreen() {
       onResume: (appId: string) => console.log(appId, 'onResume'),
       onClose: (appId: string) => console.log(appId, 'onClose'),
       onPause: (appId: string) => console.log(appId, 'onPause'),
+      onAuth: (appId: string) => console.log(appId, 'onAuth'),
       onError: (appId: string, error: string) =>
         console.log(appId, 'onError', error),
     });
@@ -39,7 +40,7 @@ export default function SecondScreen() {
   }, []);
 
   const handleOpenMiniapp = () => {
-    appboxosdk.openMiniapp('app36902', ''); //launch miniapp by id with auth payload
+    appboxosdk.openMiniapp('app16973', ''); //launch miniapp by id
   };
 
   return (
