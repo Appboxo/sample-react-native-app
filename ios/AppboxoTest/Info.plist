@@ -2,6 +2,12 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>NSCameraUsageDescription</key>
+	<string>The camera needs to scan QR codes</string>
+  <key>NSLocationWhenInUseUsageDescription</key>
+  <string>Give access for current geolocation</string>
+  <key>NSMicrophoneUsageDescription</key>
+  <string>The microphone needs to shoot a video</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleDisplayName</key>
