@@ -9,7 +9,7 @@ export default function FirstScreen() {
     const customEventsSubscription = appboxosdk.customEvents.subscribe(
       (event) => {
         const newEvent = {
-          app_id: 'app36902',
+          app_id: 'app16973',
           custom_event: {
             payload: {payment: 'received'},
             request_id: event.custom_event.request_id,
@@ -20,14 +20,28 @@ export default function FirstScreen() {
       },
       () => {},
     );
+    const paymentEventsSubscription = appboxosdk.paymentEvents.subscribe(
+      (event) => {
+        const newEvent = {
+          app_id: event.app_id,
+          payment_event: {
+            ...event.payment_event,
+            status: 'success'
+          },
+          };
+        appboxosdk.paymentEvents.send(newEvent);
+      },
+      () => {},
+    );
     return () => {
       console.log('destroy first');
       customEventsSubscription();
+      paymentEventsSubscription();
     };
   }, []);
 
   const handleOpenMiniapp = () => {
-    appboxosdk.openMiniapp('app36902', ''); //launch miniapp by id with auth payload
+    appboxosdk.openMiniapp('app16973'); //launch miniapp by id
   };
 
   return (
