@@ -10,7 +10,6 @@ export default function FirstScreen() {
       (event) => {
         const newEvent = {
           app_id: 'app16973',
-          request_id: event.custom_event.request_id,
           custom_event: {
             payload: {payment: 'received'},
             request_id: event.custom_event.request_id,
@@ -34,8 +33,21 @@ export default function FirstScreen() {
       },
       () => {},
     );
+    const lifecycleHooksSubscription = appboxosdk.lifecycleHooksListener({
+      onLaunch: (appId: string) => console.log(appId, 'onLaunch'),
+      onResume: (appId: string) => console.log(appId, 'onResume'),
+      onClose: (appId: string) => console.log(appId, 'onClose'),
+      onPause: (appId: string) => console.log(appId, 'onPause'),
+      onAuth: (appId: string) => {
+        console.log(appId, 'onAuth');
+        appboxosdk.setAuthCode(appId, '');
+      },
+      onError: (appId: string, error: string) =>
+        console.log(appId, 'onError', error),
+    });
     return () => {
       console.log('destroy first');
+      lifecycleHooksSubscription();
       customEventsSubscription();
       paymentEventsSubscription();
     };

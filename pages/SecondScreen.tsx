@@ -21,13 +21,28 @@ export default function SecondScreen() {
       },
       () => {},
     );
-
+    const paymentEventsSubscription = appboxosdk.paymentEvents.subscribe(
+      (event) => {
+        const newEvent = {
+          app_id: event.app_id,
+          payment_event: {
+            ...event.payment_event,
+            status: 'declined'
+          },
+          };
+        appboxosdk.paymentEvents.send(newEvent);
+      },
+      () => {},
+    );
     const lifecycleHooksSubscription = appboxosdk.lifecycleHooksListener({
       onLaunch: (appId: string) => console.log(appId, 'onLaunch'),
       onResume: (appId: string) => console.log(appId, 'onResume'),
       onClose: (appId: string) => console.log(appId, 'onClose'),
       onPause: (appId: string) => console.log(appId, 'onPause'),
-      onAuth: (appId: string) => console.log(appId, 'onAuth'),
+      onAuth: (appId: string) => {
+        console.log(appId, 'onAuth');
+        appboxosdk.setAuthCode(appId, '');
+      },
       onError: (appId: string, error: string) =>
         console.log(appId, 'onError', error),
     });
@@ -35,6 +50,7 @@ export default function SecondScreen() {
     return () => {
       console.log('destroy second');
       lifecycleHooksSubscription();
+      paymentEventsSubscription();
       customEventsSubscription();
     };
   }, []);
