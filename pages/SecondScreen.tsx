@@ -41,7 +41,18 @@ export default function SecondScreen() {
       onPause: (appId: string) => console.log(appId, 'onPause'),
       onAuth: (appId: string) => {
         console.log(appId, 'onAuth');
-        appboxosdk.setAuthCode(appId, '');
+
+        fetch('https://demo-hostapp.appboxo.com/api/get_auth_code/')
+        .then((response) => {
+          if (!response.ok) {
+            console.error('Error fetching auth code:', error);
+            appboxosdk.setAuthCode(appId, '');
+          }
+          return response.json();
+        })
+        .then((data) => {
+          appboxosdk.setAuthCode(appId, data.auth_code);
+        })
       },
       onError: (appId: string, error: string) =>
         console.log(appId, 'onError', error),

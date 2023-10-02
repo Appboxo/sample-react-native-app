@@ -10,7 +10,7 @@ interface Props {
 
 export default function Home({navigation}: Props) {
   React.useEffect(() => {
-    appboxosdk.setConfig('[client_id]', false); //set your Appboxo client id
+    appboxosdk.setConfig('[client_id]]', true, false); //set your Appboxo client id, sandbox mode and multitask mode
   }, []);
 
   return (
