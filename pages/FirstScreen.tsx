@@ -65,7 +65,19 @@ export default function FirstScreen() {
   }, []);
 
   const handleOpenMiniapp = () => {
-    appboxosdk.openMiniapp('app16973'); //launch miniapp by id
+    appboxosdk.openMiniapp('app16973',
+     {
+      data:{ title:'test' },
+      extraUrlParams:{
+        key1: 'value1',
+        key2: 'value2'
+      }, 
+      colors: {
+        primaryColor: '#000000', 
+        secondaryColor: '#FF0000', 
+        tertiaryColor: '#FFFF00'
+      }
+    }); //launch miniapp by id
   };
 
   return (
