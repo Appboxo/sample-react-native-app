@@ -19,7 +19,12 @@ export default function Home({ navigation }: Props) {
         },
         );
 
-        appboxosdk.setConfig('602248', true, false); // set your Appboxo client id, sandbox mode, and multitask mode
+        appboxosdk.setConfig('602248', { 
+            enableMultitaskMode: true, 
+            sandboxMode: false,
+            showClearCache: false,
+            showPermissionsPage: false
+         }); // set your Appboxo client id, sandbox mode, and multitask mode
 
         appboxosdk.getMiniapps();
 
@@ -42,7 +47,7 @@ export default function Home({ navigation }: Props) {
                 {miniapps.length > 0 &&
                     miniapps.map((app, index) => (
                         <View key={index}>
-                          <Pressable style={styles.miniappContainer} onPress={()=>{appboxosdk.openMiniapp(app.app_id)}}>
+                          <Pressable style={styles.miniappContainer} onPress={()=>{appboxosdk.openMiniapp(app.app_id, {theme:'dark', data: {title:'test'}})}}>
                               {app.logo && (
                                 <Image source={{ uri: app.logo }} style={styles.logo}/>
                               )}
