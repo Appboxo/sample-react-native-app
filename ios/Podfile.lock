@@ -316,10 +316,10 @@ PODS:
   - React-jsinspector (0.72.5)
   - React-logger (0.72.5):
     - glog
-  - react-native-appboxosdk (1.0.38):
+  - react-native-appboxosdk (1.0.37):
     - AppBoxoSDK (= 1.4.12)
     - React
-  - react-native-safe-area-context (4.7.4):
+  - react-native-safe-area-context (4.7.2):
     - React-Core
   - React-NativeModulesApple (0.72.5):
     - hermes-engine
@@ -464,7 +464,7 @@ PODS:
     - React-RCTText
     - ReactCommon/turbomodule/core
     - Yoga
-  - RNScreens (3.27.0):
+  - RNScreens (3.26.0):
     - RCT-Folly (= 2021.07.22.00)
     - React-Core
   - SocketRocket (0.6.1)
@@ -644,8 +644,8 @@ SPEC CHECKSUMS:
   React-jsiexecutor: ff70a72027dea5cc7d71cfcc6fad7f599f63987a
   React-jsinspector: aef73cbd43b70675f572214d10fa438c89bf11ba
   React-logger: 2e4aee3e11b3ec4fa6cfd8004610bbb3b8d6cca4
-  react-native-appboxosdk: 0fdfff5abf8d004f267075415462b4e5330e9c16
-  react-native-safe-area-context: 2cd91d532de12acdb0a9cbc8d43ac72a8e4c897c
+  react-native-appboxosdk: b962881a597e783b211da3d17b174ae8e875e116
+  react-native-safe-area-context: 7aa8e6d9d0f3100a820efb1a98af68aa747f9284
   React-NativeModulesApple: 797bc6078d566eef3fb3f74127e6e1d2e945a15f
   React-perflogger: cd8886513f68e1c135a1e79d20575c6489641597
   React-RCTActionSheet: 726d2615ca62a77ce3e2c13d87f65379cdc73498
@@ -666,7 +666,7 @@ SPEC CHECKSUMS:
   RNCMaskedView: 0e1bc4bfa8365eba5fbbb71e07fbdc0555249489
   RNGestureHandler: a479ebd5ed4221a810967000735517df0d2db211
   RNReanimated: ab2e96c6d5591c3dfbb38a464f54c8d17fb34a87
-  RNScreens: 3c2d122f5e08c192e254c510b212306da97d2581
+  RNScreens: 2a28f2973f4d0d4623e18629ebfc2c4adaceb39a
   SocketRocket: f32cd54efbe0f095c4d7594881e52619cfe80b17
   Yoga: 86fed2e4d425ee4c6eab3813ba1791101ee153c6
 
