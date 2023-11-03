@@ -17,6 +17,8 @@
 
 "@appboxo/react-native-sdk@file:../react-native-sdk":
   version "1.0.38"
+  resolved "https://registry.yarnpkg.com/@appboxo/react-native-sdk/-/react-native-sdk-1.0.38.tgz#39a9d9ec5f69d5ea54fadf0427f0d9c9ac1bfeb2"
+  integrity sha512-da4WEflU9zVpvp59IE6Nlb0jsuDmVK/5U0XqZTdvlt/Y4m+K87S+joxeoAmfWni0k6PTayQ2fvFkRN6zllZucg==
 
 "@babel/code-frame@^7.0.0", "@babel/code-frame@^7.12.13", "@babel/code-frame@^7.22.13":
   version "7.22.13"
