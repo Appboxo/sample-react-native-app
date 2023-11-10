@@ -20,8 +20,9 @@ export default function Home({ navigation }: Props) {
         );
 
         appboxosdk.setConfig('602248', { 
-            enableMultitaskMode: true, 
+            enableMultitaskMode: false, 
             sandboxMode: false,
+            isDebug: true,
             showClearCache: false,
             showPermissionsPage: false
          }); // set your Appboxo client id, sandbox mode, and multitask mode
@@ -43,6 +44,10 @@ export default function Home({ navigation }: Props) {
                 title="Go to second screen"
                 onPress={() => navigation.navigate('SecondScreen')}
             />
+            <Button
+                title="Go to third screen"
+                onPress={() => navigation.navigate('ThirdScreen')}
+            />
             <ScrollView style={styles.scrollContainer}>
                 {miniapps.length > 0 &&
                     miniapps.map((app, index) => (
@@ -51,7 +56,7 @@ export default function Home({ navigation }: Props) {
                               {app.logo && (
                                 <Image source={{ uri: app.logo }} style={styles.logo}/>
                               )}
-                            <Text>{app.name}</Text>
+                            <Text style={styles.miniappTitle}>{app.name}</Text>
                             </Pressable>
                         </View>
                     ))}
@@ -77,6 +82,10 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         alignItems: 'center',
         margin: 10,
+    },
+    miniappTitle: {
+        color: '#000000',
+        marginStart: 16,
     },
     logo: {
         width: 50,

@@ -9,6 +9,7 @@ import {createStackNavigator} from '@react-navigation/stack';
 import Home from './pages/Home';
 import FirstScreen from './pages/FirstScreen';
 import SecondScreen from './pages/SecondScreen';
+import ThirdScreen from './pages/ThirdScreen';
 
 const Stack = createStackNavigator();
 
@@ -19,6 +20,7 @@ export default function App() {
         <Stack.Screen name="Home" component={Home} options={{title: 'Home'}} />
         <Stack.Screen name="FirstScreen" component={FirstScreen} />
         <Stack.Screen name="SecondScreen" component={SecondScreen} />
+        <Stack.Screen name="ThirdScreen" component={ThirdScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );
