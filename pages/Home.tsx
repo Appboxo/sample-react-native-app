@@ -36,18 +36,22 @@ export default function Home({ navigation }: Props) {
 
     return (
         <View style={styles.container}>
-            <Button
-                title="Go to first screen"
-                onPress={() => navigation.navigate('FirstScreen')}
-            />
-            <Button
-                title="Go to second screen"
-                onPress={() => navigation.navigate('SecondScreen')}
-            />
-            <Button
-                title="Go to third screen"
-                onPress={() => navigation.navigate('ThirdScreen')}
-            />
+            <Pressable 
+                style={styles.button} 
+                onPress={() => navigation.navigate('FirstScreen')}>
+                <Text style={styles.buttonText}>Go to first screen</Text>           
+            </Pressable>
+            <Pressable 
+                style={styles.button} 
+                onPress={() => navigation.navigate('SecondScreen')}>
+                <Text style={styles.buttonText}>Go to second screen</Text>           
+            </Pressable>
+            <Pressable 
+                style={styles.button} 
+                onPress={() => navigation.navigate('ThirdScreen')}>
+                <Text style={styles.buttonText}>List of products</Text>           
+            </Pressable>
+            <Text style={styles.miniappsTitle}>My miniapps</Text>
             <ScrollView style={styles.scrollContainer}>
                 {miniapps.length > 0 &&
                     miniapps.map((app, index) => (
@@ -69,7 +73,6 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         flexDirection: 'column',
-        alignItems: 'center',
         backgroundColor: '#fff',
         justifyContent: 'space-around',
     },
@@ -87,8 +90,32 @@ const styles = StyleSheet.create({
         color: '#000000',
         marginStart: 16,
     },
+    miniappsTitle: {
+        color: 'black',
+        textAlign:'left',
+        marginHorizontal: 16,
+        marginTop:32,
+        marginBottom:16,
+        fontSize:24
+    },
     logo: {
         width: 50,
         height: 50,
+    },
+    button: {
+        alignItems: 'center',
+        justifyContent: 'space-around',
+        paddingVertical: 12,
+        paddingHorizontal: 32,
+        borderRadius: 6,
+        elevation: 3,
+        marginTop: 16,
+        marginLeft: 16,
+        marginRight: 16,
+        backgroundColor: 'blue',
+    },
+    buttonText: {
+        color: 'white',
+        fontSize: 16,
     },
 });
