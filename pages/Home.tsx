@@ -28,9 +28,61 @@ export default function Home({ navigation }: Props) {
          }); // set your Appboxo client id, sandbox mode, and multitask mode
 
         appboxosdk.getMiniapps();
+        const customEventsSubscription = appboxosdk.customEvents.subscribe(
+          (event) => {
+            const newEvent = {
+              app_id: 'app16973',
+              custom_event: {
+                payload: {payment: 'received'},
+                request_id: event.custom_event.request_id,
+                type: 'event',
+              },
+            };
+            appboxosdk.customEvents.send(newEvent);
+          },
+          () => {},
+        );
+        const paymentEventsSubscription = appboxosdk.paymentEvents.subscribe(
+          (event) => {
+            const newEvent = {
+              app_id: event.app_id,
+              payment_event: {
+                ...event.payment_event,
+                status: 'success'
+              },
+              };
+            appboxosdk.paymentEvents.send(newEvent);
+          },
+          () => {},
+        );
+        const lifecycleHooksSubscription = appboxosdk.lifecycleHooksListener({
+          onLaunch: (appId: string) => console.log(appId, 'onLaunch'),
+          onResume: (appId: string) => console.log(appId, 'onResume'),
+          onClose: (appId: string) => console.log(appId, 'onClose'),
+          onPause: (appId: string) => console.log(appId, 'onPause'),
+          onAuth: (appId: string) => {
+            console.log(appId, 'onAuth');
 
+            fetch('https://demo-hostapp.appboxo.com/api/get_auth_code/')
+            .then((response) => {
+              if (!response.ok) {
+                console.error('Error fetching auth code:', error);
+                appboxosdk.setAuthCode(appId, '');
+              }
+              return response.json();
+            })
+            .then((data) => {
+              appboxosdk.setAuthCode(appId, data.auth_code);
+            })
+          },
+          onError: (appId: string, error: string) =>
+            console.log(appId, 'onError', error),
+        });
         return () => {
             miniappListSubscription();
+            lifecycleHooksSubscription();
+            customEventsSubscription();
+            paymentEventsSubscription();
         };
     }, []);
 
