@@ -19,8 +19,8 @@ export default function Home({ navigation }: Props) {
         },
         );
 
-        appboxosdk.setConfig('602248', { 
-            enableMultitaskMode: false, 
+        appboxosdk.setConfig('602248', {
+            enableMultitaskMode: true,
             sandboxMode: false,
             isDebug: true,
             showClearCache: false,
