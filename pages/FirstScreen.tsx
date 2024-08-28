@@ -76,7 +76,8 @@ export default function FirstScreen() {
         primaryColor: '#000000', 
         secondaryColor: '#FF0000', 
         tertiaryColor: '#FFFF00'
-      }
+      },
+      enableSplash: true
     }); //launch miniapp by id
   };
 
