@@ -10,8 +10,10 @@
     "@jridgewell/gen-mapping" "^0.3.5"
     "@jridgewell/trace-mapping" "^0.3.24"
 
-"@appboxo/react-native-sdk@../react-native-sdk":
-  version "1.1.0"
+"@appboxo/react-native-sdk@1.4.0":
+  version "1.4.0"
+  resolved "https://registry.yarnpkg.com/@appboxo/react-native-sdk/-/react-native-sdk-1.4.0.tgz#80913c8344fc23395c641835942d62a5a2233070"
+  integrity sha512-2X3B0ExO9YRfxhDbctfdodF0UEZWnzYzQTz0ua6N16ilcweCLfcttVKU4a6ssjOwWGtZFbluf6JINv5OdsvPjA==
 
 "@babel/code-frame@^7.0.0", "@babel/code-frame@^7.12.13", "@babel/code-frame@^7.24.7":
   version "7.24.7"

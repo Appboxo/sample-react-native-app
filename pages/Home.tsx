@@ -19,7 +19,7 @@ export default function Home({ navigation }: Props) {
         },
         );
 
-        appboxosdk.setConfig('602248', {
+        appboxosdk.setConfig('CLIENT_ID', {
             enableMultitaskMode: true,
             sandboxMode: false,
             isDebug: true,
