@@ -1,6 +1,6 @@
 /*CORE*/
 import React, { useState, useEffect } from 'react';
-import { Button, StyleSheet, View, Text, Image, ScrollView, Pressable } from 'react-native';
+import { Button, StyleSheet, View, Text, Image, ScrollView, Pressable, Alert } from 'react-native';
 /*LIBS*/
 import appboxosdk, { MiniappData } from '@appboxo/react-native-sdk';
 
@@ -19,14 +19,6 @@ export default function Home({ navigation }: Props) {
         },
         );
 
-        appboxosdk.setConfig('352131', {
-            enableMultitaskMode: true,
-            sandboxMode: false,
-            isDebug: true,
-            showClearCache: false,
-            showPermissionsPage: false
-         }); // set your Appboxo client id, sandbox mode, and multitask mode
-
         appboxosdk.getMiniapps();
         const customEventsSubscription = appboxosdk.customEvents.subscribe(
           (event) => {
@@ -42,24 +34,26 @@ export default function Home({ navigation }: Props) {
           },
           () => {},
         );
+         const simpleAlertHandler = () => {
+            //function to make simple alert
+            alert('Hello I am Simple Alert');
+          };
+
         const paymentEventsSubscription = appboxosdk.paymentEvents.subscribe(
           (event) => {
-            const newEvent = {
-              app_id: event.app_id,
-              payment_event: {
-                ...event.payment_event,
-                status: 'success'
-              },
-              };
-            appboxosdk.paymentEvents.send(newEvent);
+              // hide miniapp to return to the react-native app page
+             appboxosdk.hideMiniapps();
+             // display payment screen
+             navigation.push("PaymentScreen", event);
           },
-          () => {},
+          () => { },
         );
         const lifecycleHooksSubscription = appboxosdk.lifecycleHooksListener({
           onLaunch: (appId: string) => console.log(appId, 'onLaunch'),
           onResume: (appId: string) => console.log(appId, 'onResume'),
           onClose: (appId: string) => console.log(appId, 'onClose'),
           onPause: (appId: string) => console.log(appId, 'onPause'),
+          onUserInteraction: (appId: string) => console.log(appId, 'onUserInteraction'),
           onAuth: (appId: string) => {
             console.log(appId, 'onAuth');
 
@@ -108,7 +102,9 @@ export default function Home({ navigation }: Props) {
                 {miniapps.length > 0 &&
                     miniapps.map((app, index) => (
                         <View key={index}>
-                          <Pressable style={styles.miniappContainer} onPress={()=>{appboxosdk.openMiniapp(app.app_id, {theme:'dark', data: {title:'test'}})}}>
+                          <Pressable style={styles.miniappContainer} onPress={()=>{
+                                 appboxosdk.openMiniapp(app.app_id, {theme:'dark', data: {title:'test'}})
+                              }}>
                               {app.logo && (
                                 <Image source={{ uri: app.logo }} style={styles.logo}/>
                               )}
