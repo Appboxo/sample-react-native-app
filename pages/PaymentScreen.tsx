@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import { Button, StyleSheet, View, Text, Image, ScrollView, Pressable } from 'react-native';
 /*LIBS*/
-import appboxosdk from '@appboxo/react-native-sdk';
+import Boxo from '@appboxo/react-native-sdk';
 
 
 interface Props {
@@ -30,7 +30,7 @@ export default function PaymentScreen({ navigation, route }: Props) {
       navigation.goBack();
       // after payment is completed
       // open the hidden miniapp by id and send result to miniapp
-      appboxosdk.openMiniapp(event.app_id);
+      Boxo.openMiniapp(event.app_id);
       const resultEvent = {
                     app_id: event.app_id,
                     payment_event: {
@@ -38,11 +38,11 @@ export default function PaymentScreen({ navigation, route }: Props) {
                       status: 'Success'
                     },
                   };
-      appboxosdk.paymentEvents.send(resultEvent);
+      Boxo.paymentEvents.send(resultEvent);
   }
   const cancelClick = () =>{
         navigation.goBack();
-        appboxosdk.openMiniapp(event.app_id);
+        Boxo.openMiniapp(event.app_id);
         const resultEvent = {
                        app_id: event.app_id,
                        payment_event: {
@@ -50,7 +50,7 @@ export default function PaymentScreen({ navigation, route }: Props) {
                          status: 'cancelled'
                        },
                      };
-        appboxosdk.paymentEvents.send(resultEvent);
+        Boxo.paymentEvents.send(resultEvent);
   }
 
   return (

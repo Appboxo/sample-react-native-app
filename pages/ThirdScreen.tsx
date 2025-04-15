@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import { Button, StyleSheet, View, Text, Image, ScrollView, Pressable } from 'react-native';
 /*LIBS*/
-import appboxosdk from '@appboxo/react-native-sdk';
+import Boxo from '@appboxo/react-native-sdk';
 
 export default function ThirdScreen() {
   const [products, setProducts] = useState<object[]>([]);
@@ -29,7 +29,7 @@ export default function ThirdScreen() {
                           <Pressable style={styles.productContainer} onPress={()=>{
                               console.log("App-"+product.appId);
                               console.log("handle-"+product.handle);
-                              appboxosdk.openMiniapp(product.appId, { extraUrlParams: { 'productId' : ''+product.handle } })
+                              Boxo.openMiniapp(product.appId, { extraUrlParams: { 'productId' : ''+product.handle } })
                             }}>
                               {product.image.transformedSrc && (
                                 <Image source={{ uri: product.image.transformedSrc }} style={styles.logo}/>

@@ -12,18 +12,18 @@ import SecondScreen from './pages/SecondScreen';
 import ThirdScreen from './pages/ThirdScreen';
 import PaymentScreen from './pages/PaymentScreen';
 
-import appboxosdk from '@appboxo/react-native-sdk';
+import Boxo from '@appboxo/react-native-sdk';
 
 const Stack = createStackNavigator();
 
 export default function App() {
-  appboxosdk.setConfig('352131', {
+  Boxo.setConfig('352131', {
              enableMultitaskMode: true,
              sandboxMode: false,
              isDebug: true,
              showClearCache: false,
              showPermissionsPage: false
-  }); // set your Appboxo client id, sandbox mode, and multitask mode
+  }); // set your Boxo client id, sandbox mode, and multitask mode
   return (
     <NavigationContainer>
       <Stack.Navigator>

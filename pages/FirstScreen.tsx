@@ -2,11 +2,11 @@
 import React from 'react';
 import {Button, StyleSheet, View, Text} from 'react-native';
 /*LIBS*/
-import appboxosdk from '@appboxo/react-native-sdk';
+import Boxo from '@appboxo/react-native-sdk';
 
 export default function FirstScreen() {
   React.useEffect(() => {
-    const customEventsSubscription = appboxosdk.customEvents.subscribe(
+    const customEventsSubscription = Boxo.customEvents.subscribe(
       (event) => {
         const newEvent = {
           app_id: 'app16973',
@@ -16,11 +16,11 @@ export default function FirstScreen() {
             type: 'event',
           },
         };
-        appboxosdk.customEvents.send(newEvent);
+        Boxo.customEvents.send(newEvent);
       },
       () => {},
     );
-    const paymentEventsSubscription = appboxosdk.paymentEvents.subscribe(
+    const paymentEventsSubscription = Boxo.paymentEvents.subscribe(
       (event) => {
         const newEvent = {
           app_id: event.app_id,
@@ -29,11 +29,11 @@ export default function FirstScreen() {
             status: 'success'
           },
           };
-        appboxosdk.paymentEvents.send(newEvent);
+        Boxo.paymentEvents.send(newEvent);
       },
       () => {},
     );
-    const lifecycleHooksSubscription = appboxosdk.lifecycleHooksListener({
+    const lifecycleHooksSubscription = Boxo.lifecycleHooksListener({
       onLaunch: (appId: string) => console.log(appId, 'onLaunch'),
       onResume: (appId: string) => console.log(appId, 'onResume'),
       onClose: (appId: string) => console.log(appId, 'onClose'),
@@ -45,12 +45,12 @@ export default function FirstScreen() {
         .then((response) => {
           if (!response.ok) {
             console.error('Error fetching auth code:', error);
-            appboxosdk.setAuthCode(appId, '');
+            Boxo.setAuthCode(appId, '');
           }
           return response.json();
         })
         .then((data) => {
-          appboxosdk.setAuthCode(appId, data.auth_code);
+          Boxo.setAuthCode(appId, data.auth_code);
         })
       },
       onError: (appId: string, error: string) =>
@@ -65,7 +65,7 @@ export default function FirstScreen() {
   }, []);
 
   const handleOpenMiniapp = () => {
-    appboxosdk.openMiniapp('app16973',
+    Boxo.openMiniapp('app16973',
      {
       data:{ title:'test' },
       extraUrlParams:{
@@ -77,7 +77,8 @@ export default function FirstScreen() {
         secondaryColor: '#FF0000', 
         tertiaryColor: '#FFFF00'
       },
-      enableSplash: true
+      enableSplash: true,
+      pageAnimation: 'RIGHT_TO_LEFT'
     }); //launch miniapp by id
   };
 

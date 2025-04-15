@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import { Button, StyleSheet, View, Text, Image, ScrollView, Pressable, Alert } from 'react-native';
 /*LIBS*/
-import appboxosdk, { MiniappData } from '@appboxo/react-native-sdk';
+import Boxo, { MiniappData } from '@appboxo/react-native-sdk';
 
 interface Props {
   navigation: any;
@@ -12,15 +12,15 @@ export default function Home({ navigation }: Props) {
     const [miniapps, setMiniapps] = useState<MiniappData[]>([]);
 
     useEffect(() => {
-        const miniappListSubscription = appboxosdk.miniapps.subscribe((miniapps: MiniappData[]) => {
+        const miniappListSubscription = Boxo.miniapps.subscribe((miniapps: MiniappData[]) => {
             setMiniapps(miniapps);
         }, (error) => {
             console.log(error)
         },
         );
 
-        appboxosdk.getMiniapps();
-        const customEventsSubscription = appboxosdk.customEvents.subscribe(
+        Boxo.getMiniapps();
+        const customEventsSubscription = Boxo.customEvents.subscribe(
           (event) => {
             const newEvent = {
               app_id: 'app16973',
@@ -30,7 +30,7 @@ export default function Home({ navigation }: Props) {
                 type: 'event',
               },
             };
-            appboxosdk.customEvents.send(newEvent);
+            Boxo.customEvents.send(newEvent);
           },
           () => {},
         );
@@ -39,16 +39,16 @@ export default function Home({ navigation }: Props) {
             alert('Hello I am Simple Alert');
           };
 
-        const paymentEventsSubscription = appboxosdk.paymentEvents.subscribe(
+        const paymentEventsSubscription = Boxo.paymentEvents.subscribe(
           (event) => {
               // hide miniapp to return to the react-native app page
-             appboxosdk.hideMiniapps();
+             Boxo.hideMiniapps();
              // display payment screen
              navigation.push("PaymentScreen", event);
           },
           () => { },
         );
-        const lifecycleHooksSubscription = appboxosdk.lifecycleHooksListener({
+        const lifecycleHooksSubscription = Boxo.lifecycleHooksListener({
           onLaunch: (appId: string) => console.log(appId, 'onLaunch'),
           onResume: (appId: string) => console.log(appId, 'onResume'),
           onClose: (appId: string) => console.log(appId, 'onClose'),
@@ -61,12 +61,12 @@ export default function Home({ navigation }: Props) {
             .then((response) => {
               if (!response.ok) {
                 console.error('Error fetching auth code:', error);
-                appboxosdk.setAuthCode(appId, '');
+                Boxo.setAuthCode(appId, '');
               }
               return response.json();
             })
             .then((data) => {
-              appboxosdk.setAuthCode(appId, data.auth_code);
+              Boxo.setAuthCode(appId, data.auth_code);
             })
           },
           onError: (appId: string, error: string) =>
@@ -103,7 +103,7 @@ export default function Home({ navigation }: Props) {
                     miniapps.map((app, index) => (
                         <View key={index}>
                           <Pressable style={styles.miniappContainer} onPress={()=>{
-                                 appboxosdk.openMiniapp(app.app_id, {theme:'dark', data: {title:'test'}})
+                                 Boxo.openMiniapp(app.app_id, {theme:'dark', data: {title:'test'}})
                               }}>
                               {app.logo && (
                                 <Image source={{ uri: app.logo }} style={styles.logo}/>
