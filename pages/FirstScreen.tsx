@@ -33,32 +33,8 @@ export default function FirstScreen() {
       },
       () => {},
     );
-    const lifecycleHooksSubscription = Boxo.lifecycleHooksListener({
-      onLaunch: (appId: string) => console.log(appId, 'onLaunch'),
-      onResume: (appId: string) => console.log(appId, 'onResume'),
-      onClose: (appId: string) => console.log(appId, 'onClose'),
-      onPause: (appId: string) => console.log(appId, 'onPause'),
-      onAuth: (appId: string) => {
-        console.log(appId, 'onAuth');
-
-        fetch('https://demo-hostapp.appboxo.com/api/get_auth_code/')
-        .then((response) => {
-          if (!response.ok) {
-            console.error('Error fetching auth code:', error);
-            Boxo.setAuthCode(appId, '');
-          }
-          return response.json();
-        })
-        .then((data) => {
-          Boxo.setAuthCode(appId, data.auth_code);
-        })
-      },
-      onError: (appId: string, error: string) =>
-        console.log(appId, 'onError', error),
-    });
     return () => {
       console.log('destroy first');
-      lifecycleHooksSubscription();
       customEventsSubscription();
       paymentEventsSubscription();
     };
